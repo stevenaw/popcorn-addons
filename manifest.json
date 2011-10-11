@@ -1,0 +1,17 @@
+/*
+  Add your repository information to this manifest,
+  and make a pull request on webmademovies/popcorn-addons
+*/
+
+{
+  effects: [],
+  modules: [],
+  parsers: [],
+  players: [],
+  plugins: [
+    {
+      name: "footnote",
+      location: "https://cadecairos@github.com/cadecairos/popcorn-addons.git"
+    }
+  ]
+}
