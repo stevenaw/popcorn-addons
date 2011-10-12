@@ -11,9 +11,13 @@ def checkPath(path):
     os.mkdir(distpath)
 
 dist = "./dist"
+plugindist = dist + "/plugins"
 
 if not os.path.exists(dist):
   os.mkdir(dist)
+
+if not os.path.exists(plugindist):
+  os.mkdir(plugindist)
 
 for root, dirs, filenames in os.walk("./plugins"):
   for filename in filenames:
@@ -26,7 +30,7 @@ for root, dirs, filenames in os.walk("./plugins"):
       FILE = open(fullpath, "r")
       newfilename = filename.replace( ".md", ".html" )
       folder = os.path.split(os.path.dirname(fullpath))[1]
-      distpath = safePath(os.path.abspath(os.path.join( dist, folder)))
+      distpath = safePath(os.path.abspath(os.path.join( plugindist, folder)))
 
       print "converting " + folder + "/" + filename + " to html"
       html = md.convert(FILE.read())
@@ -45,10 +49,10 @@ for root, dirs, filenames in os.walk("./plugins"):
 
       fullpath = safePath(os.path.abspath(os.path.join(root, filename)))
       folder = os.path.split(os.path.dirname(fullpath))[1]
-      distpath = safePath(os.path.abspath(os.path.join( dist, folder)))
+      distpath = safePath(os.path.abspath(os.path.join( plugindist, folder)))
       checkPath(distpath)
 
-      print "copying " + folder + "/" + filename + " to dist/" + folder
+      print "copying " + folder + "/" + filename + " to dist/plugins/" + folder
       shutil.copy(fullpath, distpath)
-      print "minifying " + folder + "/" + filename + " to dist/" + folder
+      print "minifying " + folder + "/" + filename + " to dist/plugins/" + folder
       call(["java", "-jar", "./build/google-compiler-20100917.jar", "--js", os.path.join(root, filename), "--compilation_level", "SIMPLE_OPTIMIZATIONS", "--js_output_file", os.path.join( distpath, filename.replace(".js", ".min.js"))])
