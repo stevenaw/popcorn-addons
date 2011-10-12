@@ -1,9 +1,13 @@
 #!/usr/bin/env python
 
-import sys, os, os.path, markdown, elementtree, re
+import sys, os, os.path, markdown, elementtree, re, shutil
 
 def safePath(path):
   return path.replace("\\","/");
+
+def checkPath(path):
+  if not os.path.exists(path):
+    os.mkdir(distpath)
 
 dist = "./dist"
 
@@ -19,19 +23,27 @@ for root, dirs, filenames in os.walk("./plugins"):
       md = markdown.Markdown()
       fullpath = safePath(os.path.abspath(os.path.join(root, filename)))
       FILE = open(fullpath, "r")
-
-      html = md.convert(FILE.read())
-      FILE.close()
-
       newfilename = filename.replace( ".md", ".html" )
       folder = os.path.split(os.path.dirname(fullpath))[1]
       distpath = safePath(os.path.abspath(os.path.join( dist, folder)))
 
-      if not os.path.exists(distpath):
-        os.mkdir(distpath)
+      print "converting " + folder + "/" + filename + " to html"
+      html = md.convert(FILE.read())
+      FILE.close()
+
+      checkPath(distpath)
 
       distpath = safePath(os.path.abspath(os.path.join( distpath, newfilename)))
       FILE = open( distpath, "w" )
 
       FILE.write( html )
       FILE.close()
+
+    if filename.endswith(".html") and not filename.endswith(".unit.html"):
+      fullpath = safePath(os.path.abspath(os.path.join(root, filename)))
+      folder = os.path.split(os.path.dirname(fullpath))[1]
+      distpath = safePath(os.path.abspath(os.path.join( dist, folder)))
+      checkPath(distpath)
+
+      print "copying " + folder + "/" + filename + " to dist/" + folder
+      shutil.copy(fullpath, distpath)
