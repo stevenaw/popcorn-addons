@@ -1,7 +1,7 @@
 {
   "plugins": [
-    "popcorn.footnote.js",
-    "popcorn.googlemap.js"
+    "footnote/popcorn.footnote.min.js",
+    "googlemap/popcorn.googlemap.min.js"
   ],
   "parsers": [],
   "players": [],
