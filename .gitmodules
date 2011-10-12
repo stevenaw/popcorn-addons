@@ -1,0 +1,3 @@
+[submodule "footnote"]
+	path = footnote
+	url = git@github.com:cadecairos/popcorn-footnote.git
