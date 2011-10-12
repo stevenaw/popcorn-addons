@@ -32,10 +32,6 @@ PLUGINS_SRC := $(filter-out %unit.js, $(shell find ${PLUGINS_DIR} -name 'popcorn
 
 make-min: ${PLUGINS_MIN}
 
-${PLUGINS_MIN}: ${PLUGINS_SRC} ${DIST_DIR}
-	@@echo "Building" ${PLUGINS_MIN}
-	@@$(call compile, $(shell for js in ${PLUGINS_SRC} ; do echo --js $$js ; done), ${PLUGINS_MIN})
-
 setup:
 	@@echo "initializing and updating submodules..."
 	@@git submodule update --init
@@ -46,5 +42,8 @@ build-tool: clean setup
 	@@cd ./popcorn/; make all VERSION=${VERSION}; cd ../
 
 clean:
+	@@echo "popcorn-addons..."
 	@@echo "Removing Distribution directory" ${DIST_DIR}
 	@@rm -rf ${DIST_DIR}
+	@@echo "popcorn-js..."
+	@@cd ./popcorn/; make clean; cd ../
