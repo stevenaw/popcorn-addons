@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import sys, os, os.path, markdown, elementtree, re, shutil
+from subprocess import call
 
 def safePath(path):
   return path.replace("\\","/");
@@ -39,7 +40,9 @@ for root, dirs, filenames in os.walk("./plugins"):
       FILE.write( html )
       FILE.close()
 
-    if filename.endswith(".html") and not filename.endswith(".unit.html"):
+    if filename.endswith( ".js" ) \
+        and not filename.endswith( ".unit.js" ):
+
       fullpath = safePath(os.path.abspath(os.path.join(root, filename)))
       folder = os.path.split(os.path.dirname(fullpath))[1]
       distpath = safePath(os.path.abspath(os.path.join( dist, folder)))
@@ -47,3 +50,5 @@ for root, dirs, filenames in os.walk("./plugins"):
 
       print "copying " + folder + "/" + filename + " to dist/" + folder
       shutil.copy(fullpath, distpath)
+      print "minifying " + folder + "/" + filename + " to dist/" + folder
+      call(["java", "-jar", "./build/google-compiler-20100917.jar", "--js", os.path.join(root, filename), "--compilation_level", "SIMPLE_OPTIMIZATIONS", "--js_output_file", os.path.join( distpath, filename.replace(".js", ".min.js"))])
