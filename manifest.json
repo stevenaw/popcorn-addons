@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "popcorn.footnote.js",
+    "popcorn.googlemap.js"
+  ],
+  "parsers": [],
+  "players": [],
+  "effects": []
+}
