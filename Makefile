@@ -8,6 +8,8 @@ PLAYERS_DIR = ${PREFIX}/players
 EFFECTS_DIR = $(PREFIX)/effects
 MODULES_DIR = $(PREFIX)/modules
 
+VERSION ?= $(shell git show -s --pretty=format:%h)
+
 RHINO ?= java -jar ${BUILD_DIR}/js.jar
 
 CLOSURE_COMPILER = ${BUILD_DIR}/google-compiler-20100917.jar
@@ -38,9 +40,10 @@ setup:
 	@@echo "initializing and updating submodules..."
 	@@git submodule update --init
 
-build-tool: setup ${PLUGINS_MIN}
+build-tool: clean setup
 	@@echo "Building Popcorn build tool"
 	@@python make-build-tool.py
+	@@cd ./popcorn/; make all VERSION=${VERSION}; cd ../
 
 clean:
 	@@echo "Removing Distribution directory" ${DIST_DIR}

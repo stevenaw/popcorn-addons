@@ -4,3 +4,6 @@
 [submodule "plugins/footnote"]
 	path = plugins/footnote
 	url = git@github.com:cadecairos/popcorn-footnote.git
+[submodule "popcorn"]
+	path = popcorn
+	url = git@github.com:cadecairos/popcorn-js.git
