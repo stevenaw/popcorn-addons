@@ -1,3 +1,6 @@
 [submodule "plugins/googlemap"]
 	path = plugins/googlemap
 	url = git@github.com:cadecairos/popcorn-googlemap.git
+[submodule "plugins/footnote"]
+	path = plugins/footnote
+	url = git@github.com:cadecairos/popcorn-footnote.git
