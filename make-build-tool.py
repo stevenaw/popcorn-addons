@@ -54,5 +54,5 @@ for root, dirs, filenames in os.walk("./plugins"):
 
       print "copying " + folder + "/" + filename + " to dist/plugins/" + folder
       shutil.copy(fullpath, distpath)
-      print "minifying " + folder + "/" + filename + " to dist/plugins/" + folder
-      call(["java", "-jar", "./build/google-compiler-20100917.jar", "--js", os.path.join(root, filename), "--compilation_level", "SIMPLE_OPTIMIZATIONS", "--js_output_file", os.path.join( distpath, filename.replace(".js", ".min.js"))])
+      #print "minifying " + folder + "/" + filename + " to dist/plugins/" + folder
+      #call(["java", "-jar", "./build/google-compiler-20100917.jar", "--js", os.path.join(root, filename), "--compilation_level", "SIMPLE_OPTIMIZATIONS", "--js_output_file", os.path.join( distpath, filename.replace(".js", ".min.js"))])
