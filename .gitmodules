@@ -97,9 +97,6 @@
 [submodule "parsers/parserTTXT"]
 	path = parsers/parserTTXT
 	url = git@github.com:cadecairos/popcorn-parserTTXT.git
-[submodule "parsers/parserVTT"]
-	path = parsers/parserVTT
-	url = git@github.com:cadecairos/popcorn-parserVTT.git
 [submodule "parsers/parserXML"]
 	path = parsers/parserXML
 	url = git@github.com:cadecairos/popcorn-parserXML.git
