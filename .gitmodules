@@ -103,3 +103,9 @@
 [submodule "players/vimeo"]
 	path = players/vimeo
 	url = git@github.com:cadecairos/popcorn-vimeo.git
+[submodule "plugins/image"]
+	path = plugins/image
+	url = git@github.com:cadecairos/popcorn-image.git
+[submodule "plugins/timeline"]
+	path = plugins/timeline
+	url = git@github.com:cadecairos/popcorn-timeline.git
