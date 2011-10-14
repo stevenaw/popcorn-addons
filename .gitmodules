@@ -106,3 +106,6 @@
 [submodule "plugins/timeline"]
 	path = plugins/timeline
 	url = git@github.com:cadecairos/popcorn-timeline.git
+[submodule "plugins/footnote"]
+	path = plugins/footnote
+	url = git@github.com:cadecairos/popcorn-footnote.git
