@@ -73,9 +73,6 @@
 [submodule "players/youtube"]
 	path = players/youtube
 	url = git@github.com:cadecairos/popcorn-youtube.git
-[submodule "players/vimeo"]
-	path = players/vimeo
-	url = git@github.com:cadecairos/popcorn-vimeo.git
 [submodule "players/soundcloud"]
 	path = players/soundcloud
 	url = git@github.com:cadecairos/popcorn-soundcloud.git
@@ -106,3 +103,6 @@
 [submodule "modules/timeline-sources"]
 	path = modules/timeline-sources
 	url = git@github.com:cadecairos/popcorn-timeline-sources.git
+[submodule "parsers/parserVTT"]
+	path = parsers/parserVTT
+	url = git@github.com:cadecairos/popcorn-parserVTT.git
