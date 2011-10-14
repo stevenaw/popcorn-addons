@@ -24,7 +24,22 @@
     "wikipedia/popcorn.wikipedia.js",
     "wordriver/popcorn.wordriver.js"
   ],
-  "parsers": [],
-  "players": [],
-  "effects": []
+  "parsers": [
+    "parserVTT/popcorn.parserVTT.js",
+    "parserSRT/popcorn.parserSRT.js",
+    "parserSSA/popcorn.parserSSA.js",
+    "parserJSON/popcorn.parserJSON.js",
+    "parserTTML/popcorn.parserTTML.js",
+    "parserTTXT/popcorn.parserTTXT.js",
+    "parserXML/popcorn.parserXML.js",
+    "parserSBV/popcorn.parserSBV.js"
+  ],
+  "players": [
+    "youtube/popcorn.youtube.js",
+    "vimeo/popcorn.vimeo.js",
+    "soundcloud/popcorn.soundcloud.js"
+  ],
+  "effects": [
+    "applyclass/popcorn.applyclass.js"
+  ]
 }

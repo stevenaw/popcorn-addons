@@ -46,4 +46,4 @@ clean:
 	@@echo "Removing Distribution directory" ${DIST_DIR}
 	@@rm -rf ${DIST_DIR}
 	@@echo "popcorn-js..."
-	@@cd ./popcorn/; make clean; cd ../
+	@@cd ./popcorn/; if [ -a Makefile ]; then make clean; else echo "no Makefile present"; fi; cd ../
