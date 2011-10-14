@@ -7,3 +7,105 @@
 [submodule "popcorn"]
 	path = popcorn
 	url = git@github.com:cadecairos/popcorn-js.git
+[submodule "plugins/attribution"]
+	path = plugins/attribution
+	url = git@github.com:cadecairos/popcorn-attribution.git
+[submodule "plugins/code"]
+	path = plugins/code
+	url = git@github.com:cadecairos/popcorn-code.git
+[submodule "plugins/facebook"]
+	path = plugins/facebook
+	url = git@github.com:cadecairos/popcorn-facebook.git
+[submodule "plugins/flickr"]
+	path = plugins/flickr
+	url = git@github.com:cadecairos/popcorn-flickr.git
+[submodule "plugins/gml"]
+	path = plugins/gml
+	url = git@github.com:cadecairos/popcorn-gml.git
+[submodule "plugins/googlefeed"]
+	path = plugins/googlefeed
+	url = git@github.com:cadecairos/popcorn-googlefeed.git
+[submodule "plugins/image"]
+	path = plugins/image
+	url = git@github.com:cadecairos/popcorn-image.git
+[submodule "plugins/lastfm"]
+	path = plugins/lastfm
+	url = git@github.com:cadecairos/popcorn-lastfm.git
+[submodule "plugins/linkedin"]
+	path = plugins/linkedin
+	url = git@github.com:cadecairos/popcorn-linkedin.git
+[submodule "plugins/lowerthird"]
+	path = plugins/lowerthird
+	url = git@github.com:cadecairos/popcorn-lowerthird.git
+[submodule "plugins/mustache"]
+	path = plugins/mustache
+	url = git@github.com:cadecairos/popcorn-mustache.git
+[submodule "plugins/openmap"]
+	path = plugins/openmap
+	url = git@github.com:cadecairos/popcorn-openmap.git
+[submodule "plugins/pause"]
+	path = plugins/pause
+	url = git@github.com:cadecairos/popcorn-pause.git
+[submodule "plugins/processing"]
+	path = plugins/processing
+	url = git@github.com:cadecairos/popcorn-processing.git
+[submodule "plugins/subtitle"]
+	path = plugins/subtitle
+	url = git@github.com:cadecairos/popcorn-subtitle.git
+[submodule "plugins/tagthisperson"]
+	path = plugins/tagthisperson
+	url = git@github.com:cadecairos/popcorn-tagthisperson.git
+[submodule "plugins/timeline"]
+	path = plugins/timeline
+	url = git@github.com:cadecairos/popcorn-timeline.git
+[submodule "plugins/twitter"]
+	path = plugins/twitter
+	url = git@github.com:cadecairos/popcorn-twitter.git
+[submodule "plugins/webpage"]
+	path = plugins/webpage
+	url = git@github.com:cadecairos/popcorn-webpage.git
+[submodule "plugins/wikipedia"]
+	path = plugins/wikipedia
+	url = git@github.com:cadecairos/popcorn-wikipedia.git
+[submodule "plugins/wordriver"]
+	path = plugins/wordriver
+	url = git@github.com:cadecairos/popcorn-wordriver.git
+[submodule "players/youtube"]
+	path = players/youtube
+	url = git@github.com:cadecairos/popcorn-youtube.git
+[submodule "players/vimeo"]
+	path = players/vimeo
+	url = git@github.com:cadecairos/popcorn-vimeo.git
+[submodule "players/soundcloud"]
+	path = players/soundcloud
+	url = git@github.com:cadecairos/popcorn-soundcloud.git
+[submodule "parsers/parserJSON"]
+	path = parsers/parserJSON
+	url = git@github.com:cadecairos/popcorn-parserJSON.git
+[submodule "parsers/parserSBV"]
+	path = parsers/parserSBV
+	url = git@github.com:cadecairos/popcorn-parserSBV.git
+[submodule "parsers/parserSRT"]
+	path = parsers/parserSRT
+	url = git@github.com:cadecairos/popcorn-parserSRT.git
+[submodule "parsers/parserSSA"]
+	path = parsers/parserSSA
+	url = git@github.com:cadecairos/popcorn-parserSSA.git
+[submodule "parsers/parserTTML"]
+	path = parsers/parserTTML
+	url = git@github.com:cadecairos/popcorn-parserTTML.git
+[submodule "parsers/parserTTXT"]
+	path = parsers/parserTTXT
+	url = git@github.com:cadecairos/popcorn-parserTTXT.git
+[submodule "parsers/parserVTT"]
+	path = parsers/parserVTT
+	url = git@github.com:cadecairos/popcorn-parserVTT.git
+[submodule "parsers/parserXML"]
+	path = parsers/parserXML
+	url = git@github.com:cadecairos/popcorn-parserXML.git
+[submodule "effects/applyclass"]
+	path = effects/applyclass
+	url = git@github.com:cadecairos/popcorn-applyclass.git
+[submodule "modules/timeline-sources"]
+	path = modules/timeline-sources
+	url = git@github.com:cadecairos/popcorn-timeline-sources.git
