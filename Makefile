@@ -34,7 +34,7 @@ make-min: ${PLUGINS_MIN}
 
 setup:
 	@@echo "initializing and updating submodules..."
-	@@git submodule update --init --quiet
+	@@git submodule --quiet update --init
 
 build-tool: clean setup
 	@@echo "Building Popcorn build tool"
