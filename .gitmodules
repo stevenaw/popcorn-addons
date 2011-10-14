@@ -25,9 +25,6 @@
 [submodule "plugins/googlefeed"]
 	path = plugins/googlefeed
 	url = git@github.com:cadecairos/popcorn-googlefeed.git
-[submodule "plugins/image"]
-	path = plugins/image
-	url = git@github.com:cadecairos/popcorn-image.git
 [submodule "plugins/lastfm"]
 	path = plugins/lastfm
 	url = git@github.com:cadecairos/popcorn-lastfm.git
@@ -55,9 +52,6 @@
 [submodule "plugins/tagthisperson"]
 	path = plugins/tagthisperson
 	url = git@github.com:cadecairos/popcorn-tagthisperson.git
-[submodule "plugins/timeline"]
-	path = plugins/timeline
-	url = git@github.com:cadecairos/popcorn-timeline.git
 [submodule "plugins/twitter"]
 	path = plugins/twitter
 	url = git@github.com:cadecairos/popcorn-twitter.git
@@ -106,3 +100,6 @@
 [submodule "parsers/parserVTT"]
 	path = parsers/parserVTT
 	url = git@github.com:cadecairos/popcorn-parserVTT.git
+[submodule "players/vimeo"]
+	path = players/vimeo
+	url = git@github.com:cadecairos/popcorn-vimeo.git
