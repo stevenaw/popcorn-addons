@@ -59,7 +59,8 @@ def process( root, filename, dist, m ):
     return ""
 
   if filename.endswith( ".js" ) \
-      and not filename.endswith( ".unit.js" ):
+      and not filename.endswith( ".unit.js" ) \
+      and not filename.endswith( ".player.api.js" ):
 
     fullpath = safePath( os.path.abspath( os.path.join( root, filename ) ) )
     folder = os.path.split( os.path.dirname( fullpath ) )[ 1 ]
