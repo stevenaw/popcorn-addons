@@ -68,7 +68,25 @@ def process( root, filename, dist, m ):
     checkPath( distpath )
 
     shutil.copy( fullpath, distpath )
-    return '    "' + folder + '/' + filename + '",\n'
+
+    description = "Placeholder Description"
+
+    if os.path.isfile( root + "/readme.md"):
+      FILE = open( root + "/readme.md", "r" )
+      found = False
+      skipped = False
+      for line in FILE:
+        if found == True:
+          if skipped == True:
+            description = line[:len(line) - 2]
+            break
+          else:
+            skipped = True
+        if re.search( "Purpose", line ):
+          found = True
+      FILE.close()
+
+    return '    { "name": "' + folder + '/' + filename + '", "description": "' + description +'" }, \n'
 
 print "Building dist/plugins ..."
 manifestText = manifestText + '\n  "plugins": [\n'
@@ -82,7 +100,7 @@ for root, dirs, filenames in os.walk( "./plugins" ):
       manifestText = manifestText + text
 
 print "Building dist/parsers/ ..."
-manifestText = manifestText[:len( manifestText ) - 2 ]  + '\n  ],\n  "parsers": [\n'
+manifestText = manifestText[:len( manifestText ) - 3 ]  + '\n  ],\n  "parsers": [\n'
 for root, dirs, filenames in os.walk( "./parsers" ):
   for filename in filenames:
     sys.stdout.flush()
@@ -93,7 +111,7 @@ for root, dirs, filenames in os.walk( "./parsers" ):
       manifestText = manifestText + text
 
 print "Building dist/players/ ..."
-manifestText = manifestText[:len( manifestText ) - 2 ]  + '\n  ],\n  "players": [\n'
+manifestText = manifestText[:len( manifestText ) - 3 ]  + '\n  ],\n  "players": [\n'
 for root, dirs, filenames in os.walk( "./players" ):
   for filename in filenames:
     sys.stdout.flush()
@@ -104,7 +122,7 @@ for root, dirs, filenames in os.walk( "./players" ):
       manifestText = manifestText + text
 
 print "Building dist/modules/ ..."
-manifestText = manifestText[:len( manifestText ) - 2 ]  + '\n  ],\n  "modules": [\n'
+manifestText = manifestText[:len( manifestText ) - 3 ]  + '\n  ],\n  "modules": [\n'
 for root, dirs, filenames in os.walk( "./modules" ):
   for filename in filenames:
     sys.stdout.flush()
@@ -115,7 +133,7 @@ for root, dirs, filenames in os.walk( "./modules" ):
       manifestText = manifestText + text
 
 print "Building dist/effects/ ..."
-manifestText = manifestText[:len( manifestText ) - 2 ]  + '\n  ], \n  "effects": [\n'
+manifestText = manifestText[:len( manifestText ) - 3 ]  + '\n  ], \n  "effects": [\n'
 for root, dirs, filenames in os.walk( "./effects" ):
   for filename in filenames:
     sys.stdout.flush()
@@ -125,7 +143,7 @@ for root, dirs, filenames in os.walk( "./effects" ):
     if ( text ):
       manifestText = manifestText + text
 
-manifestText = manifestText[:len( manifestText ) - 2 ]  + '\n  ]\n}'
+manifestText = manifestText[:len( manifestText ) - 3 ]  + '\n  ]\n}'
 
 if os.path.isfile( "./manifest.json" ):
   os.remove( "./manifest.json" )
