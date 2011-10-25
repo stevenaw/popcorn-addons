@@ -78,7 +78,7 @@ def process( root, filename, dist, m ):
       for line in FILE:
         if found == True:
           if skipped == True:
-            description = line[:len(line) - 2]
+            description = line[:len(line) - 1]
             break
           else:
             skipped = True
